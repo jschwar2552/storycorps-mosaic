@@ -30,6 +30,11 @@ cache/
 .env
 config/secrets.json
 api_keys.txt
+.env.local
+
+# Test results
+data/test_results_*.txt
+data/patterns/
 
 # Frontend
 frontend/node_modules/
