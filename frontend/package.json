@@ -2,6 +2,7 @@
   "name": "mosaic-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jschwar2552.github.io/storycorps-mosaic",
   "proxy": "http://localhost:3000",
   "dependencies": {
     "react": "^18.2.0",
