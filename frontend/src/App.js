@@ -22,7 +22,7 @@ function App() {
 
     try {
       // Call our API
-      const response = await fetch('/api/chat', {
+      const response = await fetch('https://storycorps-mosaic-nbn9lqq2k-jason-schwartzs-projects-cc3de6d1.vercel.app/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text })
