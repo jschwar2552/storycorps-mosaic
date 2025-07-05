@@ -104,10 +104,21 @@ function App() {
                 {msg.stories && (
                   <div className="story-previews">
                     {msg.stories.map((story, i) => (
-                      <div key={i} className="story-preview">
+                      <div 
+                        key={i} 
+                        className="story-preview clickable"
+                        onClick={() => window.open(story.url, '_blank')}
+                        title="Click to read full story on StoryCorps"
+                      >
                         <h4>{story.title}</h4>
                         <span className="location">{story.location}</span>
                         <p>{story.snippet}</p>
+                        <div className="story-actions">
+                          <span className="read-more">Click to read full story →</span>
+                          {story.audioUrl && (
+                            <span className="audio-indicator">🎧 Audio available</span>
+                          )}
+                        </div>
                       </div>
                     ))}
                   </div>

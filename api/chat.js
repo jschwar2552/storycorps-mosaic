@@ -196,7 +196,10 @@ function formatResponse(analysis, stories) {
       id: s.id,
       title: s.title,
       location: s.location?.region?.[0] || 'Unknown',
-      snippet: s.description?.slice(0, 150) + '...'
+      snippet: s.description?.slice(0, 150) + '...',
+      url: s.url || `https://archive.storycorps.org/interviews/${s.id}`,
+      audioUrl: s.audio_url,
+      participants: s.participants || []
     })),
     followUp: followUp || "What aspect of this would you like to explore deeper?",
     fullAnalysis: analysis
