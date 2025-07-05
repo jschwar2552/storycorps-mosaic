@@ -4,7 +4,8 @@
   "description": "Discovering human unity through stories",
   "scripts": {
     "dev": "vercel dev",
-    "build": "cd frontend && npm run build",
+    "build": "cd frontend && npm install && npm run build",
+    "vercel-build": "cd frontend && npm install && npm run build && mv build ../public",
     "deploy": "vercel --prod",
     "test-api": "cd backend && python3 test_mosaic_simple.py"
   },

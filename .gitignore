@@ -48,6 +48,30 @@ frontend/build/
 frontend/.env.local
 *.log
 
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+*.tsbuildinfo
+.npm
+.eslintcache
+.stylelintcache
+.yarn
+.pnp.*
+
+# Production builds
+build/
+dist/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.turbo/
+
 # IDE
 .vscode/
 .idea/
@@ -59,3 +83,4 @@ frontend/.env.local
 rate_limit_test_results/
 story_cache/
 monitoring/logs/
+.vercel
