@@ -162,8 +162,15 @@ Be warm, insightful, and conversational.`;
 }
 
 function formatResponse(analysis, stories) {
+  // Handle both string and object analysis
+  let analysisText = analysis;
+  if (typeof analysis === 'object' && analysis !== null) {
+    // If Claude returned an object, extract the text
+    analysisText = analysis.text || analysis.message || JSON.stringify(analysis);
+  }
+  
   // Parse Claude's analysis
-  const lines = analysis.split('\n');
+  const lines = String(analysisText).split('\n');
   let unityScore = 0.7;
   let keyInsight = '';
   let commonThreads = [];
@@ -215,7 +222,18 @@ async function callClaude(prompt, apiKey) {
   });
   
   const data = await response.json();
-  return data.content[0].text;
+  
+  // Handle errors from Claude API
+  if (data.error) {
+    throw new Error(`Claude API error: ${data.error.message || data.error}`);
+  }
+  
+  // Extract text from response
+  if (data.content && data.content[0] && data.content[0].text) {
+    return data.content[0].text;
+  }
+  
+  throw new Error('Unexpected Claude API response format');
 }
 
 function extractTheme(message) {
