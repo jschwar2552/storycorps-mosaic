@@ -5,8 +5,18 @@ function App() {
   const [messages, setMessages] = useState([
     {
       type: 'bot',
-      text: "Hi! I'm Mosaic. I help discover human connections across different backgrounds. What are you curious about?",
-      suggestions: ["Tell me about family struggles", "How do people find hope?", "Show me immigrant stories"]
+      text: "Hi! I'm Mosaic. I help discover human connections across different backgrounds. Ask me anything about the human experience - I'll find surprising connections between people who seem nothing alike.",
+      suggestions: [
+        "Tell me about family struggles",
+        "How do people find hope?", 
+        "Show me immigrant stories",
+        "What connects parents across cultures?",
+        "How do people deal with loss?",
+        "Stories about finding purpose",
+        "How do different generations see America?",
+        "What does home mean to people?",
+        "Show me stories about resilience"
+      ]
     }
   ]);
   const [input, setInput] = useState('');
@@ -43,7 +53,8 @@ function App() {
         stories: data.response.preview,
         analysis: data.response.analysis,
         followUp: data.response.followUp,
-        locations: data.response.locations
+        locations: data.response.locations,
+        suggestions: generateFollowUpSuggestions(text)
       }]);
 
     } catch (error) {
@@ -212,7 +223,7 @@ function App() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about human connections..."
+            placeholder="Ask anything about the human experience..."
             disabled={loading}
           />
           <button type="submit" disabled={loading || !input.trim()}>
@@ -222,6 +233,39 @@ function App() {
       </div>
     </div>
   );
+}
+
+// Generate contextual follow-up suggestions
+function generateFollowUpSuggestions(query) {
+  const theme = query.toLowerCase();
+  const basePrompts = [
+    "Dig deeper into this theme",
+    "Show me more contrasts",
+    "Find surprising connections"
+  ];
+  
+  // Add theme-specific prompts
+  if (theme.includes('family') || theme.includes('parent')) {
+    return [...basePrompts, "How do chosen families form?", "What bonds non-blood families?", "Show me single parent stories"];
+  } else if (theme.includes('hope') || theme.includes('resilience')) {
+    return [...basePrompts, "Where do people find strength?", "Stories of rebuilding", "Unexpected sources of hope"];
+  } else if (theme.includes('immigrant') || theme.includes('america')) {
+    return [...basePrompts, "What does home mean?", "First vs second generation", "Dreams across borders"];
+  } else if (theme.includes('loss') || theme.includes('grief')) {
+    return [...basePrompts, "How people honor memory", "Finding joy after loss", "Rituals of remembrance"];
+  } else if (theme.includes('love') || theme.includes('relationship')) {
+    return [...basePrompts, "Love across generations", "Unconventional love stories", "How love survives hardship"];
+  } else if (theme.includes('work') || theme.includes('purpose')) {
+    return [...basePrompts, "Finding meaning in work", "Career vs calling", "Work across generations"];
+  } else {
+    return [
+      "Show me another angle",
+      "Find deeper connections", 
+      "Explore related themes",
+      "Compare different regions",
+      "Show generational differences"
+    ];
+  }
 }
 
 export default App;

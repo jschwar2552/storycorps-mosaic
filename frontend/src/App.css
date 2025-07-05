@@ -296,26 +296,47 @@
 }
 
 .suggestions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
   margin-top: 15px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f5f7fa;
+  border-radius: 8px;
 }
 
 .suggestion-btn {
   background: white;
   border: 2px solid #667eea;
   color: #667eea;
-  padding: 8px 16px;
+  padding: 10px 12px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: all 0.2s;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.3;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .suggestion-btn:hover {
   background: #667eea;
   color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+  .suggestions {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    max-height: 250px;
+  }
 }
 
 .follow-up {
