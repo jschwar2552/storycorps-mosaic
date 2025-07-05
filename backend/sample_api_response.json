@@ -1,0 +1,1285 @@
+[
+  {
+    "_id": 5500030,
+    "id": 5500030,
+    "interview_id": "APP5500030",
+    "author": {
+      "_id": 701870,
+      "id": 701870,
+      "name": "Tuckerton Seaport",
+      "avatar": "https://archive.storycorps.org/uploads/2022/03/622cfc8ee1c3a__Logo-Square.png"
+    },
+    "default_source": "storage",
+    "audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5500030/APP5500030-A82D2638-49D2-4C41-870F-62B614134B6B.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=1ecd5cde7ab7a50078e75ec4623402ca1be1519bd5ef01490f39587475dec022",
+      "length": 1472,
+      "source": "aws"
+    },
+    "interview_audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5500030/APP5500030-A82D2638-49D2-4C41-870F-62B614134B6B.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=1ecd5cde7ab7a50078e75ec4623402ca1be1519bd5ef01490f39587475dec022",
+      "length": 1472,
+      "source": "aws"
+    },
+    "time": "",
+    "status": "publish",
+    "activity": [],
+    "title": "The Story of Elsie Driscoll with Lora Botanelli",
+    "description": "Join us as we delve into the life of Elsiee Driscoll, a lifelong resident of Tuckerton, who shares her rich tapestry of memories. From her family's boat shop and fish factory days to the challenges of rebuilding a home and raising a family, Elsie's story is one of resilience, hard work, and community spirit. Discover the history of a coastal town through the eyes of someone who lived it.",
+    "additional_participants": [
+      {
+        "first_name": "Tuckerton",
+        "last_name": "Seaport",
+        "uuid": "cb5e1175-ae0d-4086-9839-6784eae2d858"
+      }
+    ],
+    "questions": [],
+    "location": {
+      "address": "",
+      "locality": [],
+      "region": [
+        "New Jersey"
+      ],
+      "country": [
+        "United States"
+      ]
+    },
+    "keywords": [
+      "anecdotes (humorous but true stories)",
+      "Family",
+      "memories of former times",
+      "memories of growing up",
+      "personal experiences",
+      "social beliefs and practices",
+      "Spouse"
+    ],
+    "places": [
+      "New Jersey",
+      "seaport",
+      "Tuckerton"
+    ],
+    "organizations": [
+      "Tuckerton Seaport"
+    ],
+    "tiers": [],
+    "languages": [
+      "English"
+    ],
+    "taxonomies": {
+      "keywords": [
+        {
+          "id": 164891,
+          "slug": "anecdotes-humorous-but-true-stories",
+          "title": "anecdotes (humorous but true stories)"
+        },
+        {
+          "id": 610,
+          "slug": "family",
+          "title": "Family"
+        },
+        {
+          "id": 264597,
+          "slug": "memories-of-former-times",
+          "title": "memories of former times"
+        },
+        {
+          "id": 264604,
+          "slug": "memories-of-growing-up",
+          "title": "memories of growing up"
+        },
+        {
+          "id": 17301,
+          "slug": "personal-experiences",
+          "title": "personal experiences"
+        },
+        {
+          "id": 311303,
+          "slug": "social-beliefs-and-practices",
+          "title": "social beliefs and practices"
+        },
+        {
+          "id": 17496,
+          "slug": "spouse",
+          "title": "Spouse"
+        }
+      ],
+      "places": [
+        {
+          "id": 2424,
+          "slug": "new-jersey",
+          "title": "New Jersey"
+        },
+        {
+          "id": 502327,
+          "slug": "seaport",
+          "title": "seaport"
+        },
+        {
+          "id": 431081,
+          "slug": "tuckerton",
+          "title": "Tuckerton"
+        }
+      ],
+      "organizations": [
+        {
+          "id": 447220,
+          "slug": "tuckerton-seaport",
+          "title": "Tuckerton Seaport"
+        }
+      ],
+      "initiatives": [],
+      "subjects": [],
+      "tiers": [],
+      "languages": [
+        {
+          "id": 54588,
+          "slug": "english",
+          "title": "English"
+        }
+      ]
+    },
+    "collections": [],
+    "geo": {},
+    "communities": [
+      3514799
+    ],
+    "photo": "https://archive.storycorps.org/uploads/2025/07/6868653323f62__APP5500030-CA01C09A-9DF2-4C0E-B7F8-7047AFF6FF6B.png",
+    "created_date": "2025-07-04T23:32:14+00:00",
+    "created_date_utc": 1751671903000,
+    "modified_date": "2025-07-04 23:39:35",
+    "excerpts": "",
+    "annotations": "",
+    "plays": 2,
+    "likes": 0,
+    "user_likes": false,
+    "user_flagged": false,
+    "release_status": {
+      "id": "Unknown",
+      "name": "Unknown"
+    },
+    "url": "https://archive.storycorps.org/interviews/the-story-of-elise-driscoll-with-lora-botanelli/",
+    "permissions": {
+      "permit": "public"
+    }
+  },
+  {
+    "_id": 5500009,
+    "id": 5500009,
+    "interview_id": "APP5500009",
+    "author": {
+      "_id": 947101,
+      "id": 947101,
+      "name": "Brianna Mccarron",
+      "avatar": "https://archive.storycorps.org/uploads/2025/07/4e8ae1617608b2d6c6b25b8971198370.png"
+    },
+    "default_source": "storage",
+    "audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5500009/APP5500009-9FE75712-4A5C-4B06-9673-0D764BB39A6F.m4a?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=cc1fa744d92c11e34552eef7212bac22ea4012cba5689720089a8e2955a8bb9e",
+      "length": 579,
+      "source": "aws"
+    },
+    "interview_audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5500009/APP5500009-9FE75712-4A5C-4B06-9673-0D764BB39A6F.m4a?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=cc1fa744d92c11e34552eef7212bac22ea4012cba5689720089a8e2955a8bb9e",
+      "length": 579,
+      "source": "aws"
+    },
+    "time": "",
+    "status": "publish",
+    "activity": [],
+    "title": "Mary K McCarron on The Ulster Project",
+    "description": "Mary K McCarron, 81, discusses her experience in the 1980s with the Ulster Project in Alliance, OH. Through this project, teenagers from Northern Ireland came over and stayed with a host family. Mary and her husband were one of the host families. Through this project, she built a lifelong friendship.",
+    "additional_participants": [
+      {
+        "first_name": "Brianna",
+        "last_name": "Mccarron",
+        "uuid": "b511545e-6db8-4277-a934-18532f7f11b1"
+      }
+    ],
+    "questions": [],
+    "location": {
+      "address": "",
+      "locality": [],
+      "region": [
+        "Ohio"
+      ],
+      "country": [
+        "United States"
+      ]
+    },
+    "keywords": [
+      "Exchange Program",
+      "Host family",
+      "personal experiences",
+      "The Ulster Project",
+      "Ulster Project"
+    ],
+    "places": [
+      "Nothern Ireland",
+      "Ohio"
+    ],
+    "organizations": [],
+    "tiers": [],
+    "languages": [
+      "English"
+    ],
+    "taxonomies": {
+      "keywords": [
+        {
+          "id": 9066,
+          "slug": "exchange-program",
+          "title": "Exchange Program"
+        },
+        {
+          "id": 13436,
+          "slug": "host-family",
+          "title": "Host family"
+        },
+        {
+          "id": 17301,
+          "slug": "personal-experiences",
+          "title": "personal experiences"
+        },
+        {
+          "id": 502318,
+          "slug": "the-ulster-project",
+          "title": "The Ulster Project"
+        },
+        {
+          "id": 502321,
+          "slug": "ulster-project",
+          "title": "Ulster Project"
+        }
+      ],
+      "places": [
+        {
+          "id": 502324,
+          "slug": "nothern-ireland",
+          "title": "Nothern Ireland"
+        },
+        {
+          "id": 2552,
+          "slug": "ohio",
+          "title": "Ohio"
+        }
+      ],
+      "organizations": [],
+      "initiatives": [],
+      "subjects": [],
+      "tiers": [],
+      "languages": [
+        {
+          "id": 54588,
+          "slug": "english",
+          "title": "English"
+        }
+      ]
+    },
+    "collections": [],
+    "geo": {},
+    "communities": [],
+    "photo": "https://archive.storycorps.org/wp-content/themes/archive-child/assets/images/placeholder_1480.png",
+    "created_date": "2025-07-04T18:07:15+00:00",
+    "created_date_utc": 1751652401000,
+    "modified_date": "2025-07-04 18:07:15",
+    "excerpts": "",
+    "annotations": "",
+    "plays": 0,
+    "likes": 0,
+    "user_likes": false,
+    "user_flagged": false,
+    "release_status": {
+      "id": "Unknown",
+      "name": "Unknown"
+    },
+    "url": "https://archive.storycorps.org/interviews/mary-k-mccarron-on-the-ulster-project/",
+    "permissions": {
+      "permit": "public"
+    }
+  },
+  {
+    "_id": 5499994,
+    "id": 5499994,
+    "interview_id": "APP5499994",
+    "author": {
+      "_id": 947044,
+      "id": 947044,
+      "name": "Gwen Feldbush",
+      "avatar": "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y&s=200"
+    },
+    "default_source": "storage",
+    "audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499994/APP5499994-4F0F396D-0CE5-430E-90F9-429C881569FF.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=c35048daf17b214f53ba53f88757323867b3f02aa18298ddf756307e81b16ae6",
+      "length": 1979,
+      "source": "aws"
+    },
+    "interview_audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499994/APP5499994-4F0F396D-0CE5-430E-90F9-429C881569FF.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=c35048daf17b214f53ba53f88757323867b3f02aa18298ddf756307e81b16ae6",
+      "length": 1979,
+      "source": "aws"
+    },
+    "time": "",
+    "status": "publish",
+    "activity": [],
+    "title": "Music Chat with my dad 7.4.2025",
+    "description": "Tegwen (25) and her dad Mark (54) chat about first albums and the way listening to music has changed over decades.",
+    "additional_participants": [
+      {
+        "first_name": "Mark",
+        "last_name": "Feldbush"
+      },
+      {
+        "first_name": "Gwen",
+        "last_name": "Feldbush"
+      }
+    ],
+    "questions": [
+      "Can you tell me about someone who had a big influence on your life? Would you tell me about some of the most important lessons that person taught you?",
+      "Can you describe one of your happiest memories?",
+      "What are you proudest of? Why does it make you feel proud?",
+      "How would you like to be remembered?",
+      "If this were to be our very last conversation, is there anything you\u2019d want to say to me?",
+      "For your great-great-grandchildren listening to this years from now: is there any wisdom you\u2019d want to pass on to them? What would you want them to know?"
+    ],
+    "location": {
+      "address": "",
+      "locality": "Columbus",
+      "region": "Ohio",
+      "country": "United States"
+    },
+    "keywords": [
+      "The great listen"
+    ],
+    "places": [],
+    "organizations": [],
+    "tiers": [],
+    "languages": [],
+    "taxonomies": {
+      "keywords": [
+        {
+          "id": 10472,
+          "slug": "the-great-listen",
+          "title": "The great listen"
+        }
+      ],
+      "places": [],
+      "organizations": [],
+      "initiatives": [],
+      "subjects": [],
+      "tiers": [],
+      "languages": []
+    },
+    "collections": [],
+    "geo": {
+      "country_code": "US"
+    },
+    "communities": [],
+    "photo": "https://archive.storycorps.org/uploads/2025/07/68680f6a370fd__APP5499994-EC1E552B-EAA8-4DD5-8561-570FFCD536AD.jpg",
+    "created_date": "2025-07-04T17:30:14+00:00",
+    "created_date_utc": 1751649917000,
+    "modified_date": "2025-07-04 17:30:14",
+    "excerpts": "",
+    "annotations": "",
+    "plays": 0,
+    "likes": 0,
+    "user_likes": false,
+    "user_flagged": false,
+    "release_status": {
+      "id": "Unknown",
+      "name": "Unknown"
+    },
+    "url": "https://archive.storycorps.org/interviews/music-chat-with-my-dad-7-4-2025/",
+    "permissions": {
+      "permit": "public"
+    }
+  },
+  {
+    "_id": 5499895,
+    "id": 5499895,
+    "interview_id": "APP5499895",
+    "author": {
+      "_id": 947074,
+      "id": 947074,
+      "name": "Dariya A",
+      "avatar": "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y&s=200"
+    },
+    "default_source": "storage",
+    "audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499895/APP5499895-D643A3F1-D487-4E15-AE5D-080518F1CFA1.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=19550f93ef0dbe5812833debbd36004aa84094f6d476effed72c3bb5f3926837",
+      "length": 1265,
+      "source": "aws"
+    },
+    "interview_audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499895/APP5499895-D643A3F1-D487-4E15-AE5D-080518F1CFA1.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=19550f93ef0dbe5812833debbd36004aa84094f6d476effed72c3bb5f3926837",
+      "length": 1265,
+      "source": "aws"
+    },
+    "time": "",
+    "status": "publish",
+    "activity": [],
+    "title": "Connecting the Dots &#8211; Natalia&#039;s Photography",
+    "description": "Natalia (50 ish) talks with her daughter (30) about her career path, starting with creative hobbies and engineering and leading to a photography passion that became a business.",
+    "additional_participants": [
+      {
+        "first_name": "Dariya",
+        "last_name": "A",
+        "uuid": "f9ceba5e-5084-465b-a83b-70a6c2dc8874"
+      },
+      {
+        "first_name": "Natalia",
+        "last_name": "Natalia",
+        "uuid": "e374cd5f-e8b1-47d5-8521-1b938876326e"
+      }
+    ],
+    "questions": [],
+    "location": {
+      "address": "",
+      "locality": [],
+      "region": [
+        "Ohio",
+        ""
+      ],
+      "country": [
+        "United States",
+        "United States"
+      ]
+    },
+    "keywords": [
+      "career",
+      "career changes",
+      "Photographer"
+    ],
+    "places": [],
+    "organizations": [],
+    "tiers": [],
+    "languages": [
+      "American English"
+    ],
+    "taxonomies": {
+      "keywords": [
+        {
+          "id": 3671,
+          "slug": "career",
+          "title": "career"
+        },
+        {
+          "id": 184385,
+          "slug": "career-changes",
+          "title": "career changes"
+        },
+        {
+          "id": 8045,
+          "slug": "photographer",
+          "title": "Photographer"
+        }
+      ],
+      "places": [],
+      "organizations": [],
+      "initiatives": [],
+      "subjects": [],
+      "tiers": [],
+      "languages": [
+        {
+          "id": 69578,
+          "slug": "american-english",
+          "title": "American English"
+        }
+      ]
+    },
+    "collections": [],
+    "geo": {},
+    "communities": [],
+    "photo": "https://archive.storycorps.org/wp-content/themes/archive-child/assets/images/placeholder_1480.png",
+    "created_date": "2025-07-04T15:31:14+00:00",
+    "created_date_utc": 1751643066000,
+    "modified_date": "2025-07-04 15:31:14",
+    "excerpts": "",
+    "annotations": "",
+    "plays": 3,
+    "likes": 0,
+    "user_likes": false,
+    "user_flagged": false,
+    "release_status": {
+      "id": "Unknown",
+      "name": "Unknown"
+    },
+    "url": "https://archive.storycorps.org/interviews/connecting-the-dots-natalias-photography/",
+    "permissions": {
+      "permit": "public"
+    }
+  },
+  {
+    "_id": 5499883,
+    "id": 5499883,
+    "interview_id": "APP5499883",
+    "author": {
+      "_id": 945271,
+      "id": 945271,
+      "name": "Fiona Rogers",
+      "avatar": "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y&s=200"
+    },
+    "default_source": "storage",
+    "audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499883/APP5499883-B83A95AF-B889-42CB-8B0F-836FABE13577.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=cfef79805a1183b408cd73bff77df1acf74c86102b40f4a5d553632ff9682c69",
+      "length": 997,
+      "source": "aws"
+    },
+    "interview_audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499883/APP5499883-B83A95AF-B889-42CB-8B0F-836FABE13577.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=cfef79805a1183b408cd73bff77df1acf74c86102b40f4a5d553632ff9682c69",
+      "length": 997,
+      "source": "aws"
+    },
+    "time": "",
+    "status": "publish",
+    "activity": [],
+    "title": "Jim Greaney talks about meeting his spouse at Pinewoods and many other memories",
+    "description": "Jim Greaney sat down with Fiona Rogers in Pinecones and recalled many memories coming to Pinewoods over the years as a camper and volunteer- doing work from scrubbing toilets to inventorying trees to scrubbing the kitchen. Jim talks about people he met here including his current wife Chris Reynolds. He calls Pinewoods his \u201chome away from home.\u201d",
+    "additional_participants": [
+      {
+        "first_name": "Jim",
+        "last_name": "Greaney"
+      },
+      {
+        "first_name": "Fiona",
+        "last_name": "Rogers"
+      }
+    ],
+    "questions": [
+      "Can you tell me about someone who had a big influence on your life? Would you tell me about some of the most important lessons that person taught you?",
+      "Can you describe one of your happiest memories?",
+      "What are you proudest of? Why does it make you feel proud?",
+      "How would you like to be remembered?",
+      "If this were to be our very last conversation, is there anything you\u2019d want to say to me?",
+      "For your great-great-grandchildren listening to this years from now: is there any wisdom you\u2019d want to pass on to them? What would you want them to know?"
+    ],
+    "location": {
+      "address": "",
+      "locality": "Plymouth",
+      "region": "Massachusetts",
+      "country": "United States"
+    },
+    "keywords": [
+      "Centennial",
+      "folk dancing",
+      "Pinewoods Camp",
+      "traditional dance"
+    ],
+    "places": [],
+    "organizations": [],
+    "tiers": [],
+    "languages": [],
+    "taxonomies": {
+      "keywords": [
+        {
+          "id": 33837,
+          "slug": "centennial",
+          "title": "Centennial"
+        },
+        {
+          "id": 219432,
+          "slug": "folk-dancing",
+          "title": "folk dancing"
+        },
+        {
+          "id": 501202,
+          "slug": "pinewoods-camp",
+          "title": "Pinewoods Camp"
+        },
+        {
+          "id": 328116,
+          "slug": "traditional-dance",
+          "title": "traditional dance"
+        }
+      ],
+      "places": [],
+      "organizations": [],
+      "initiatives": [],
+      "subjects": [],
+      "tiers": [],
+      "languages": []
+    },
+    "collections": [],
+    "geo": {
+      "country_code": "US"
+    },
+    "communities": [],
+    "photo": "https://archive.storycorps.org/uploads/2025/07/6867df608fa39__APP5499883-FB190E2A-4A95-40E5-92AE-F9E65A072317-scaled.jpg",
+    "created_date": "2025-07-04T14:05:15+00:00",
+    "created_date_utc": 1751637768000,
+    "modified_date": "2025-07-04 14:05:15",
+    "excerpts": "",
+    "annotations": "",
+    "plays": 0,
+    "likes": 0,
+    "user_likes": false,
+    "user_flagged": false,
+    "release_status": {
+      "id": "Unknown",
+      "name": "Unknown"
+    },
+    "url": "https://archive.storycorps.org/interviews/jim-greaney-talks-about-meeting-his-spouse-at-pinewoods-and-many-other-memories/",
+    "permissions": {
+      "permit": "public"
+    }
+  },
+  {
+    "_id": 5499859,
+    "id": 5499859,
+    "interview_id": "APP5499859",
+    "author": {
+      "_id": 835496,
+      "id": 835496,
+      "name": "Caleb Blagg",
+      "avatar": "https://archive.storycorps.org/uploads/2024/10/66fdff0716c4e__6F4AA254-1B05-454C-9498-E3A122D51472.png"
+    },
+    "default_source": "storage",
+    "audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499859/APP5499859-04DB892A-7488-4ED2-96FD-2C1A3EB7B6E7.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=cb64485dc63e5c94f4f94e2985278cfff614dab0cba1afdcdca1fc0292b5bc7c",
+      "length": 832,
+      "source": "aws"
+    },
+    "interview_audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499859/APP5499859-04DB892A-7488-4ED2-96FD-2C1A3EB7B6E7.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=cb64485dc63e5c94f4f94e2985278cfff614dab0cba1afdcdca1fc0292b5bc7c",
+      "length": 832,
+      "source": "aws"
+    },
+    "time": "",
+    "status": "publish",
+    "activity": [],
+    "title": "Granny\u2019s Family Part 2",
+    "description": "My grandmother, Marilyn Blagg (76), discusses her early marriage and raising children. Especially renovating the old family log cabin.",
+    "additional_participants": [
+      {
+        "first_name": "Marilyn",
+        "last_name": "Blagg"
+      },
+      {
+        "first_name": "Caleb",
+        "last_name": "Blagg"
+      }
+    ],
+    "questions": [
+      "Can you tell me about someone who had a big influence on your life? Would you tell me about some of the most important lessons that person taught you?",
+      "Can you describe one of your happiest memories?",
+      "What are you proudest of? Why does it make you feel proud?",
+      "How would you like to be remembered?",
+      "If this were to be our very last conversation, is there anything you\u2019d want to say to me?",
+      "For your great-great-grandchildren listening to this years from now: is there any wisdom you\u2019d want to pass on to them? What would you want them to know?"
+    ],
+    "location": {
+      "address": "",
+      "locality": "Doe Hill",
+      "region": "Virginia",
+      "country": "United States"
+    },
+    "keywords": [
+      "children",
+      "Dating",
+      "house renovations",
+      "Marriage"
+    ],
+    "places": [],
+    "organizations": [],
+    "tiers": [],
+    "languages": [],
+    "taxonomies": {
+      "keywords": [
+        {
+          "id": 1095,
+          "slug": "children",
+          "title": "children"
+        },
+        {
+          "id": 1749,
+          "slug": "dating",
+          "title": "Dating"
+        },
+        {
+          "id": 236711,
+          "slug": "house-renovations",
+          "title": "house renovations"
+        },
+        {
+          "id": 1029,
+          "slug": "marriage",
+          "title": "Marriage"
+        }
+      ],
+      "places": [],
+      "organizations": [],
+      "initiatives": [],
+      "subjects": [],
+      "tiers": [],
+      "languages": []
+    },
+    "collections": [],
+    "geo": {
+      "country_code": "US"
+    },
+    "communities": [],
+    "photo": "https://archive.storycorps.org/uploads/2025/07/6867589c070c4__APP5499859-8078AF1C-3F93-489F-9112-E5FAB98E71E0.jpg",
+    "created_date": "2025-07-04T04:30:14+00:00",
+    "created_date_utc": 1751603106000,
+    "modified_date": "2025-07-04 04:30:14",
+    "excerpts": "",
+    "annotations": "",
+    "plays": 0,
+    "likes": 0,
+    "user_likes": false,
+    "user_flagged": false,
+    "release_status": {
+      "id": "Unknown",
+      "name": "Unknown"
+    },
+    "url": "https://archive.storycorps.org/interviews/grannys-family-part-2/",
+    "permissions": {
+      "permit": "public"
+    }
+  },
+  {
+    "_id": 5499847,
+    "id": 5499847,
+    "interview_id": "APP5499847",
+    "author": {
+      "_id": 835496,
+      "id": 835496,
+      "name": "Caleb Blagg",
+      "avatar": "https://archive.storycorps.org/uploads/2024/10/66fdff0716c4e__6F4AA254-1B05-454C-9498-E3A122D51472.png"
+    },
+    "default_source": "storage",
+    "audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499847/APP5499847-7E7BC4A4-B578-4985-9B9C-C35C41D67667.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=376438ff23515b0bc80710483833e7e7a42b7e747e37123acc8001c1ce905847",
+      "length": 2582,
+      "source": "aws"
+    },
+    "interview_audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499847/APP5499847-7E7BC4A4-B578-4985-9B9C-C35C41D67667.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=376438ff23515b0bc80710483833e7e7a42b7e747e37123acc8001c1ce905847",
+      "length": 2582,
+      "source": "aws"
+    },
+    "time": "",
+    "status": "publish",
+    "activity": [],
+    "title": "Granny\u2019s Family",
+    "description": "My grandmother, Marilyn Gosser Blagg (76) shares stories about her Parents, Grandparents, and Great-Grandmother.",
+    "additional_participants": [
+      {
+        "first_name": "Marilyn",
+        "last_name": "Blagg"
+      },
+      {
+        "first_name": "Caleb",
+        "last_name": "Blagg"
+      }
+    ],
+    "questions": [
+      "Can you tell me about someone who had a big influence on your life? Would you tell me about some of the most important lessons that person taught you?",
+      "Can you describe one of your happiest memories?",
+      "What are you proudest of? Why does it make you feel proud?",
+      "How would you like to be remembered?",
+      "If this were to be our very last conversation, is there anything you\u2019d want to say to me?",
+      "For your great-great-grandchildren listening to this years from now: is there any wisdom you\u2019d want to pass on to them? What would you want them to know?"
+    ],
+    "location": {
+      "address": "",
+      "locality": "Doe Hill",
+      "region": "Virginia",
+      "country": "United States"
+    },
+    "keywords": [
+      "Church",
+      "Farm Life",
+      "Grandparents",
+      "Military Brat",
+      "Moving",
+      "preacher&#039;s kid"
+    ],
+    "places": [
+      "Idaho",
+      "Japan",
+      "Korea",
+      "Maryland",
+      "Oregon"
+    ],
+    "organizations": [],
+    "tiers": [],
+    "languages": [],
+    "taxonomies": {
+      "keywords": [
+        {
+          "id": 1720,
+          "slug": "church",
+          "title": "Church"
+        },
+        {
+          "id": 1276,
+          "slug": "farm-life",
+          "title": "Farm Life"
+        },
+        {
+          "id": 1277,
+          "slug": "grandparents",
+          "title": "Grandparents"
+        },
+        {
+          "id": 30738,
+          "slug": "military-brat",
+          "title": "Military Brat"
+        },
+        {
+          "id": 1173,
+          "slug": "moving",
+          "title": "Moving"
+        },
+        {
+          "id": 290369,
+          "slug": "preachers-kid",
+          "title": "preacher&#039;s kid"
+        }
+      ],
+      "places": [
+        {
+          "id": 2726,
+          "slug": "idaho",
+          "title": "Idaho"
+        },
+        {
+          "id": 1303,
+          "slug": "japan",
+          "title": "Japan"
+        },
+        {
+          "id": 3100,
+          "slug": "korea",
+          "title": "Korea"
+        },
+        {
+          "id": 2024,
+          "slug": "maryland",
+          "title": "Maryland"
+        },
+        {
+          "id": 1589,
+          "slug": "oregon",
+          "title": "Oregon"
+        }
+      ],
+      "organizations": [],
+      "initiatives": [],
+      "subjects": [],
+      "tiers": [],
+      "languages": []
+    },
+    "collections": [],
+    "geo": {
+      "country_code": "US"
+    },
+    "communities": [],
+    "photo": "https://archive.storycorps.org/uploads/2025/07/686753ebe0921__APP5499847-E7BCFD4E-45EC-4157-916F-0AB58CC918FB.jpg",
+    "created_date": "2025-07-04T04:10:14+00:00",
+    "created_date_utc": 1751601853000,
+    "modified_date": "2025-07-04 04:10:14",
+    "excerpts": "",
+    "annotations": "",
+    "plays": 1,
+    "likes": 0,
+    "user_likes": false,
+    "user_flagged": false,
+    "release_status": {
+      "id": "Unknown",
+      "name": "Unknown"
+    },
+    "url": "https://archive.storycorps.org/interviews/grannys-family/",
+    "permissions": {
+      "permit": "public"
+    }
+  },
+  {
+    "_id": 5499835,
+    "id": 5499835,
+    "interview_id": "APP5499835",
+    "author": {
+      "_id": 939169,
+      "id": 939169,
+      "name": "vmmtbn9nck@privaterelay.appleid.com",
+      "avatar": "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y&s=200"
+    },
+    "default_source": "storage",
+    "audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499835/APP5499835-15A96FD9-C9D6-4B22-B91F-CC63B77727BE.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=46cea2c2358a6e199ac2a5dd82f37434269dfdd0efaf4677d7bc84440d9eb5ce",
+      "length": 977,
+      "source": "aws"
+    },
+    "interview_audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499835/APP5499835-15A96FD9-C9D6-4B22-B91F-CC63B77727BE.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=46cea2c2358a6e199ac2a5dd82f37434269dfdd0efaf4677d7bc84440d9eb5ce",
+      "length": 977,
+      "source": "aws"
+    },
+    "time": "",
+    "status": "publish",
+    "activity": [],
+    "title": "A Mans Legacy",
+    "description": "Five Brothers; Zachary (38), Andrew (36), Samuel(31), Logan(23), and Garrett (21) share a final group conversation with their Father, Michael (62), during one of his last few weeks in in-home hospice care. The discussion touches on life, duty, and legacy.",
+    "additional_participants": [
+      {
+        "first_name": "Andrew",
+        "last_name": "Mans"
+      },
+      {
+        "first_name": "Samuel",
+        "last_name": "Mans"
+      },
+      {
+        "first_name": "Logan",
+        "last_name": "Mans"
+      },
+      {
+        "first_name": "Garrett",
+        "last_name": "Mans"
+      },
+      {
+        "first_name": "Michael",
+        "last_name": "Mans"
+      },
+      {
+        "first_name": "",
+        "last_name": ""
+      }
+    ],
+    "questions": [
+      "What were you like as a child? What did you love to do?",
+      "Can you tell me about one of your happiest memories?",
+      "Was there a moment in your life \u2014 not work-related \u2014 that made you feel truly alive?",
+      "Were there people who shaped your thinking or changed your life?",
+      "What are you most grateful for?",
+      "What values guided you throughout your life \u2014 especially when no one was watching?",
+      "What does \"service\" mean to you?",
+      "What do you hope people remember most about you?",
+      "What were the happiest moments of your life?",
+      "What would you say was your purpose or calling?",
+      "Is there anything you want to say to those who will hear this years from now?",
+      "Were there moments that changed you forever?",
+      "How has facing cancer changed how you see life?",
+      "What has been your proudest moment as a father?",
+      "Are there things about us that you\u2019ve always wanted to know but have never asked?",
+      "What should we know to carry you with us when you\u2019re gone?",
+      "What were the most difficult challenges you faced, and how did you get through them?",
+      "What have we meant to you?",
+      "What do you think makes a life well lived?",
+      "How did your family influence the person you became?",
+      "What advice would you give your grand children?",
+      "What\u2019s the most important lesson you\u2019ve learned?"
+    ],
+    "location": {
+      "address": "",
+      "locality": "Pinehurst",
+      "region": "North Carolina",
+      "country": "United States"
+    },
+    "keywords": [
+      "Duty",
+      "Legacy",
+      "Love, Life, Family"
+    ],
+    "places": [
+      "Minnesota",
+      "Pinehurst, NC",
+      "Western Europe"
+    ],
+    "organizations": [],
+    "tiers": [],
+    "languages": [],
+    "taxonomies": {
+      "keywords": [
+        {
+          "id": 15916,
+          "slug": "duty",
+          "title": "Duty"
+        },
+        {
+          "id": 2105,
+          "slug": "legacy",
+          "title": "Legacy"
+        },
+        {
+          "id": 439946,
+          "slug": "love-life-family",
+          "title": "Love, Life, Family"
+        }
+      ],
+      "places": [
+        {
+          "id": 1263,
+          "slug": "minnesota",
+          "title": "Minnesota"
+        },
+        {
+          "id": 102481,
+          "slug": "pinehurst-nc",
+          "title": "Pinehurst, NC"
+        },
+        {
+          "id": 109218,
+          "slug": "western-europe",
+          "title": "Western Europe"
+        }
+      ],
+      "organizations": [],
+      "initiatives": [],
+      "subjects": [],
+      "tiers": [],
+      "languages": []
+    },
+    "collections": [],
+    "geo": {
+      "country_code": "US"
+    },
+    "communities": [],
+    "photo": "https://archive.storycorps.org/uploads/2025/07/68674e0f49532__APP5499835-9600606D-4228-4BC8-BC57-6ED835BB7B83.jpg",
+    "created_date": "2025-07-04T03:45:14+00:00",
+    "created_date_utc": 1751600547000,
+    "modified_date": "2025-07-04 03:45:14",
+    "excerpts": "",
+    "annotations": "",
+    "plays": 1,
+    "likes": 0,
+    "user_likes": false,
+    "user_flagged": false,
+    "release_status": {
+      "id": "Unknown",
+      "name": "Unknown"
+    },
+    "url": "https://archive.storycorps.org/interviews/a-mans-legacy/",
+    "permissions": {
+      "permit": "public"
+    }
+  },
+  {
+    "_id": 5499745,
+    "id": 5499745,
+    "interview_id": "APP5499745",
+    "author": {
+      "_id": 947014,
+      "id": 947014,
+      "name": "Michelle Bankes",
+      "avatar": "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y&s=200"
+    },
+    "default_source": "storage",
+    "audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499745/APP5499745-0DD804B0-F1A8-4F2D-A701-8F103ABDA1C6.m4a?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=66a2ce0f749a39259db6c0c5bbdf2ed76ee0c2e363e025a7876cc78238cc3f1f",
+      "length": 550,
+      "source": "aws"
+    },
+    "interview_audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499745/APP5499745-0DD804B0-F1A8-4F2D-A701-8F103ABDA1C6.m4a?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=66a2ce0f749a39259db6c0c5bbdf2ed76ee0c2e363e025a7876cc78238cc3f1f",
+      "length": 550,
+      "source": "aws"
+    },
+    "time": "",
+    "status": "publish",
+    "activity": [],
+    "title": "Cathy\u2019s Ominous Experience of Cult Protesters in the Sixties",
+    "description": "Cathy (78) encounters a dark group of protesters at Ohio University in the Sixties.",
+    "additional_participants": [
+      {
+        "first_name": "Michelle",
+        "last_name": "Bankes",
+        "uuid": "5c0eae02-cd8a-4097-9f75-f4854c7f8908"
+      },
+      {
+        "first_name": "Cathy",
+        "last_name": "M",
+        "uuid": "cfcd4639-117a-4c07-a5e7-9890f81a7487"
+      }
+    ],
+    "questions": [],
+    "location": {
+      "address": "",
+      "locality": "Zanesville",
+      "region": "Ohio",
+      "country": "United States"
+    },
+    "keywords": [
+      "1960s, Sixties",
+      "Ohio",
+      "Ohio University"
+    ],
+    "places": [],
+    "organizations": [],
+    "tiers": [],
+    "languages": [],
+    "taxonomies": {
+      "keywords": [
+        {
+          "id": 12026,
+          "slug": "1960s-sixties",
+          "title": "1960s, Sixties"
+        },
+        {
+          "id": 4101,
+          "slug": "ohio",
+          "title": "Ohio"
+        },
+        {
+          "id": 278910,
+          "slug": "ohio-university",
+          "title": "Ohio University"
+        }
+      ],
+      "places": [],
+      "organizations": [],
+      "initiatives": [],
+      "subjects": [],
+      "tiers": [],
+      "languages": []
+    },
+    "collections": [],
+    "geo": {
+      "country_code": "US"
+    },
+    "communities": [],
+    "photo": "https://archive.storycorps.org/wp-content/themes/archive-child/assets/images/placeholder_1480.png",
+    "created_date": "2025-07-03T22:50:14+00:00",
+    "created_date_utc": 1751583001000,
+    "modified_date": "2025-07-04 14:17:32",
+    "excerpts": "",
+    "annotations": "",
+    "plays": 0,
+    "likes": 0,
+    "user_likes": false,
+    "user_flagged": false,
+    "release_status": {
+      "id": "Unknown",
+      "name": "Unknown"
+    },
+    "url": "https://archive.storycorps.org/interviews/cathys-ominous-ohio-morning-in-the-sixties/",
+    "permissions": {
+      "permit": "public"
+    }
+  },
+  {
+    "_id": 5499724,
+    "id": 5499724,
+    "interview_id": "APP5499724",
+    "author": {
+      "_id": 945271,
+      "id": 945271,
+      "name": "Fiona Rogers",
+      "avatar": "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y&s=200"
+    },
+    "default_source": "storage",
+    "audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499724/APP5499724-1CE1064C-6127-4906-A394-551D091DA827.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=8df6dcd0edfb4473a473d10716185ab0429b75723a6e8bc696eade9550692cf3",
+      "length": 2674,
+      "source": "aws"
+    },
+    "interview_audio": {
+      "url": "https://storycorpsarchive.s3.us-west-2.amazonaws.com/APP/APP5499724/APP5499724-1CE1064C-6127-4906-A394-551D091DA827.mp3?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWKX7L3X3OY4OHFN5%2F20250705%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250705T010821Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=8df6dcd0edfb4473a473d10716185ab0429b75723a6e8bc696eade9550692cf3",
+      "length": 2674,
+      "source": "aws"
+    },
+    "time": "",
+    "status": "publish",
+    "activity": [],
+    "title": "Christine (Chris) Reynolds talks about her history with camp and experience researching Helen Storrow",
+    "description": "Fiona Rogers sat down with Christine Reynolds in The Cave during ESCape week to talk about how Chris got involved with dancing in the Boston area and then came to dance at Pinewoods; the story of how she met her current spouse (Jim Greaney) at Pinewoods; lots of history about Helen Storrow; and Chris\u2019s experience working with the Pinewoods Archives Committee to compile historical information on the history of Pinewoods and create a museum quality timeline exhibit currently on display at Camp. Chris had a wealth of information about Helen Storrow and her legacy both in the Girl Scouts and in the greater Boston area, as well as a very interesting perspective having been both a camper and also involved behind the scenes at Pinewoods quite a bit: coming to Work Weekends, working with the PCI board on Centennial projects, among other assignments by previous Executive Directors.",
+    "additional_participants": [
+      {
+        "first_name": "Fiona",
+        "last_name": "Rogers",
+        "uuid": "3956b3a8-09a1-4c55-92dc-2429914c8bda"
+      },
+      {
+        "first_name": "Christine",
+        "last_name": "Reynolds",
+        "uuid": "f3e17706-8427-4b9c-a364-8e5ff63bf569"
+      }
+    ],
+    "questions": [
+      "What would you like to see Pinewoods doing during the next 100 years? What should stay the same, what could change?",
+      "Would you like to share any stories about relationships/friendships that formed from your time at Pinewoods?",
+      "tell me about your experience on the board. I hear you came here with Daniel on your knee.",
+      "What are the camp weeks you\u2019ve attended? How many times have you been to Pinewoods? Why do you come back?\nDo you remember your first cabin? What\u2019s your favorite cabin? Do you have any specific memories about any cabins?",
+      "When did you first come to camp? How old were you or what year was it? Who were you with, or, how did you happen to choose or end up at Pinewoods? What did you know about Pinewoods before you came?",
+      "What are your names, where are you recording from, what is the date, and how is it that you are together today?"
+    ],
+    "location": {
+      "address": "",
+      "locality": [
+        "Plymouth",
+        "Plymouth"
+      ],
+      "region": [
+        "Massachusetts",
+        "Massachusetts"
+      ],
+      "country": [
+        "United States",
+        "United States"
+      ]
+    },
+    "keywords": [
+      "Centennial",
+      "Pinewoods Camp"
+    ],
+    "places": [
+      "Boston MA",
+      "Plymouth MA"
+    ],
+    "organizations": [],
+    "tiers": [],
+    "languages": [],
+    "taxonomies": {
+      "keywords": [
+        {
+          "id": 33837,
+          "slug": "centennial",
+          "title": "Centennial"
+        },
+        {
+          "id": 501202,
+          "slug": "pinewoods-camp",
+          "title": "Pinewoods Camp"
+        }
+      ],
+      "places": [
+        {
+          "id": 1288,
+          "slug": "boston-ma",
+          "title": "Boston MA"
+        },
+        {
+          "id": 36597,
+          "slug": "plymouth-ma",
+          "title": "Plymouth MA"
+        }
+      ],
+      "organizations": [],
+      "initiatives": [],
+      "subjects": [],
+      "tiers": [],
+      "languages": []
+    },
+    "collections": [],
+    "geo": {},
+    "communities": [
+      3603687
+    ],
+    "photo": "https://archive.storycorps.org/uploads/2025/07/6866f5000f79a__APP5499724-EBA9F062-726B-490A-BE87-99230F52F52F-scaled.jpg",
+    "created_date": "2025-07-03T21:25:14+00:00",
+    "created_date_utc": 1751577650000,
+    "modified_date": "2025-07-04 13:49:48",
+    "excerpts": "",
+    "annotations": "",
+    "plays": 0,
+    "likes": 0,
+    "user_likes": false,
+    "user_flagged": false,
+    "release_status": {
+      "id": "Unknown",
+      "name": "Unknown"
+    },
+    "url": "https://archive.storycorps.org/interviews/christine-chris-reynolds/",
+    "permissions": {
+      "permit": "public"
+    }
+  }
+]
