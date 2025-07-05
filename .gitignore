@@ -36,6 +36,12 @@ api_keys.txt
 data/test_results_*.txt
 data/patterns/
 
+# NEVER commit these
+generate_patterns_with_key.sh
+.env
+.env.local
+*.log
+
 # Frontend
 frontend/node_modules/
 frontend/build/

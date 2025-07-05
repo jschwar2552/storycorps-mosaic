@@ -1,0 +1,14 @@
+{
+  "name": "mosaic",
+  "version": "1.0.0",
+  "description": "Discovering human unity through stories",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "cd frontend && npm run build",
+    "deploy": "vercel --prod",
+    "test-api": "cd backend && python3 test_mosaic_simple.py"
+  },
+  "keywords": ["storycorps", "unity", "ai", "claude"],
+  "author": "Jason",
+  "license": "MIT"
+}
