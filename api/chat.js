@@ -137,25 +137,35 @@ async function analyzeConnections(stories, intent, apiKey) {
     byLocation[region].push(story);
   });
   
-  // Create analysis prompt
-  const prompt = `The user expressed: "${intent.theme}" with emotion: "${intent.emotion}"
+  // Create analysis prompt for finding unity across differences
+  const prompt = `Find the hidden connections between these ${stories.length} StoryCorps interviews about "${intent.theme}":
 
-Analyze these ${stories.length} StoryCorps stories to find human connections:
+${stories.slice(0, 5).map((s, idx) => `
+Story ${idx + 1}: "${s.title}"
+Location: ${s.location?.region?.[0] || 'Unknown'}
+Keywords: ${s.keywords?.slice(0, 5).join(', ') || 'None'}
+Description: ${s.description?.slice(0, 200)}...
+`).join('\n---\n')}
 
-${Object.entries(byLocation).slice(0, 5).map(([region, regionStories]) => `
-${region} (${regionStories.length} stories):
-${regionStories.slice(0, 3).map(s => `- ${s.title}: ${s.description?.slice(0, 100)}...`).join('\n')}
-`).join('\n')}
+ANALYZE THE CONTRAST AND CONNECTION:
 
-Provide:
-1. UNITY_SCORE: [0.0-1.0]
-2. KEY_INSIGHT: One profound sentence about what connects these people
-3. COMMON_THREADS: 3 specific shared experiences
-4. SURPRISING_CONNECTION: Something unexpected that unites them
-5. STORY_PAIR: IDs of two stories that powerfully show this connection
-6. FOLLOW_UP: A question to explore deeper
+1. SURFACE_DIFFERENCES: List 3-5 ways these storytellers are different (location, age, background, circumstances)
+Example: "A rural farmer in Iowa vs an immigrant in NYC; generation that built America vs generation trying to enter it"
 
-Be warm, insightful, and conversational.`;
+2. DEEP_CONNECTIONS: Find 3 specific things they ALL share despite differences
+Example: "Both describe the kitchen table as the heart of family; both use the phrase 'making something from nothing'; both see sacrifice as love"
+
+3. SURPRISING_UNITY: What unexpected thing connects them?
+Example: "The Iowa farmer and NYC immigrant both describe America using the metaphor of a 'promise kept to their children'"
+
+4. CONCRETE_EXAMPLES: Pull specific quotes or moments that prove the connection
+Example: "Farmer: 'Every harvest, I think of my kids' future' | Immigrant: 'Every paycheck, I save for my children's dreams'"
+
+5. UNITY_SCORE: [0.0-1.0] How strongly connected are these stories?
+
+6. THE_HUMAN_TRUTH: In one profound sentence, what universal human experience emerges?
+
+Format your response to highlight BOTH the differences AND the connections. Show how people who seem nothing alike are actually deeply connected.`;
 
   return await callClaude(prompt, apiKey);
 }
@@ -164,34 +174,86 @@ function formatResponse(analysis, stories) {
   // Handle both string and object analysis
   let analysisText = analysis;
   if (typeof analysis === 'object' && analysis !== null) {
-    // If Claude returned an object, extract the text
     analysisText = analysis.text || analysis.message || JSON.stringify(analysis);
   }
   
-  // Parse Claude's analysis
+  // Parse Claude's structured analysis
   const lines = String(analysisText).split('\n');
   let unityScore = 0.7;
-  let keyInsight = '';
-  let commonThreads = [];
-  let followUp = '';
+  let humanTruth = '';
+  let surfaceDifferences = [];
+  let deepConnections = [];
+  let surprisingUnity = '';
+  let concreteExamples = [];
   
-  // Extract components (simplified parsing)
+  let currentSection = '';
+  
   lines.forEach(line => {
-    if (line.includes('UNITY_SCORE:')) {
-      unityScore = parseFloat(line.split(':')[1]) || 0.7;
-    } else if (line.includes('KEY_INSIGHT:')) {
-      keyInsight = line.split(':').slice(1).join(':').trim();
-    } else if (line.includes('FOLLOW_UP:')) {
-      followUp = line.split(':').slice(1).join(':').trim();
+    const trimmed = line.trim();
+    
+    // Identify sections
+    if (trimmed.includes('SURFACE_DIFFERENCES:')) {
+      currentSection = 'differences';
+    } else if (trimmed.includes('DEEP_CONNECTIONS:')) {
+      currentSection = 'connections';
+    } else if (trimmed.includes('SURPRISING_UNITY:')) {
+      currentSection = 'surprising';
+    } else if (trimmed.includes('CONCRETE_EXAMPLES:')) {
+      currentSection = 'examples';
+    } else if (trimmed.includes('UNITY_SCORE:')) {
+      const scoreMatch = line.match(/[\d.]+/);
+      if (scoreMatch) unityScore = parseFloat(scoreMatch[0]);
+      currentSection = '';
+    } else if (trimmed.includes('THE_HUMAN_TRUTH:')) {
+      humanTruth = line.split(':').slice(1).join(':').trim();
+      currentSection = '';
+    } else if (trimmed && !trimmed.startsWith('Example:')) {
+      // Add content to appropriate section
+      switch(currentSection) {
+        case 'differences':
+          if (trimmed.match(/^[-•*]/)) surfaceDifferences.push(trimmed.substring(1).trim());
+          else if (trimmed && surfaceDifferences.length === 0) surfaceDifferences.push(trimmed);
+          break;
+        case 'connections':
+          if (trimmed.match(/^[-•*]/)) deepConnections.push(trimmed.substring(1).trim());
+          else if (trimmed && deepConnections.length === 0) deepConnections.push(trimmed);
+          break;
+        case 'surprising':
+          if (!surprisingUnity) surprisingUnity = trimmed;
+          break;
+        case 'examples':
+          if (trimmed.includes('|') || trimmed.includes(':')) {
+            concreteExamples.push(trimmed);
+          }
+          break;
+      }
     }
   });
   
-  // Build conversational response
+  // Build enhanced response with contrasts and connections
   const response = {
-    message: keyInsight || `I found ${stories.length} stories that connect around this theme.`,
+    message: humanTruth || `These ${stories.length} stories reveal deep human connections across different backgrounds.`,
     unityScore,
     storyCount: stories.length,
     locations: [...new Set(stories.map(s => s.location?.region?.[0] || 'Unknown'))],
+    
+    // NEW: Structured analysis showing differences and connections
+    analysis: {
+      surfaceDifferences: surfaceDifferences.length > 0 ? surfaceDifferences : [
+        `Stories from ${stories.length} different locations`,
+        'Various backgrounds and life experiences',
+        'Different generations and perspectives'
+      ],
+      deepConnections: deepConnections.length > 0 ? deepConnections : [
+        'Shared human experiences',
+        'Common values and hopes',
+        'Universal themes of connection'
+      ],
+      surprisingUnity: surprisingUnity || 'Despite their differences, all share a common thread of human resilience',
+      concreteExamples: concreteExamples.length > 0 ? concreteExamples : []
+    },
+    
+    // Story previews with enhanced metadata
     preview: stories.slice(0, 3).map(s => ({
       id: s.id,
       title: s.title,
@@ -199,10 +261,12 @@ function formatResponse(analysis, stories) {
       snippet: s.description?.slice(0, 150) + '...',
       url: s.url || `https://archive.storycorps.org/interviews/${s.id}`,
       audioUrl: s.audio_url,
-      participants: s.participants || []
+      participants: s.participants || [],
+      keywords: s.keywords?.slice(0, 3) || []
     })),
-    followUp: followUp || "What aspect of this would you like to explore deeper?",
-    fullAnalysis: analysis
+    
+    followUp: "What other human connections would you like to explore?",
+    fullAnalysis: analysisText
   };
   
   return response;

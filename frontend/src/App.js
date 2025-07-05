@@ -35,12 +35,13 @@ function App() {
         throw new Error(data.error);
       }
 
-      // Add bot response
+      // Add bot response with enhanced analysis
       setMessages(prev => [...prev, {
         type: 'bot',
         text: data.response.message,
         unityScore: data.response.unityScore,
         stories: data.response.preview,
+        analysis: data.response.analysis,
         followUp: data.response.followUp,
         locations: data.response.locations
       }]);
@@ -101,6 +102,46 @@ function App() {
                   </div>
                 )}
                 
+                {msg.analysis && (
+                  <div className="analysis-section">
+                    <div className="contrast-connection">
+                      <div className="differences">
+                        <h4>🌍 Surface Differences</h4>
+                        <ul>
+                          {msg.analysis.surfaceDifferences.map((diff, i) => (
+                            <li key={i}>{diff}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="connections">
+                        <h4>💝 Deep Connections</h4>
+                        <ul>
+                          {msg.analysis.deepConnections.map((conn, i) => (
+                            <li key={i}>{conn}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    {msg.analysis.surprisingUnity && (
+                      <div className="surprising-unity">
+                        <h4>✨ The Surprising Unity</h4>
+                        <p>{msg.analysis.surprisingUnity}</p>
+                      </div>
+                    )}
+                    
+                    {msg.analysis.concreteExamples.length > 0 && (
+                      <div className="concrete-examples">
+                        <h4>💬 Voices Across Divides</h4>
+                        {msg.analysis.concreteExamples.map((example, i) => (
+                          <p key={i} className="example">{example}</p>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+                
                 {msg.stories && (
                   <div className="story-previews">
                     {msg.stories.map((story, i) => (
@@ -111,7 +152,16 @@ function App() {
                         title="Click to read full story on StoryCorps"
                       >
                         <h4>{story.title}</h4>
-                        <span className="location">{story.location}</span>
+                        <div className="story-meta">
+                          <span className="location">{story.location}</span>
+                          {story.keywords && story.keywords.length > 0 && (
+                            <div className="keywords">
+                              {story.keywords.map((keyword, idx) => (
+                                <span key={idx} className="keyword">{keyword}</span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                         <p>{story.snippet}</p>
                         <div className="story-actions">
                           <span className="read-more">Click to read full story →</span>
