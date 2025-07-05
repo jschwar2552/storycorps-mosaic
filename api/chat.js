@@ -55,30 +55,20 @@ export default async function handler(req, res) {
 }
 
 async function parseUserIntent(message, apiKey) {
-  // Use Claude to understand what the user is looking for
-  const prompt = `User message: "${message}"
+  // For now, skip Claude for intent parsing to save API calls and time
+  // Just use direct keyword extraction
+  const msgLower = message.toLowerCase();
   
-Extract the user's intent for finding human connections:
-1. THEME: What theme are they interested in? (e.g., struggle, hope, family)
-2. EMOTION: What emotion are they expressing? (e.g., lonely, curious, inspired)
-3. CONTEXT: Any specific demographic or situation mentioned?
-4. SEARCH_TERMS: Keywords to search for in stories
-
-Format as JSON.`;
-
-  const response = await callClaude(prompt, apiKey);
+  // Extract meaningful words (skip common words)
+  const stopWords = ['the', 'about', 'tell', 'me', 'show', 'find', 'with', 'and', 'or', 'for', 'how', 'what', 'when', 'where', 'who'];
+  const words = msgLower.split(' ').filter(w => w.length > 2 && !stopWords.includes(w));
   
-  try {
-    return JSON.parse(response);
-  } catch {
-    // Fallback parsing
-    return {
-      theme: extractTheme(message),
-      emotion: "curious",
-      context: null,
-      search_terms: message.toLowerCase().split(' ').filter(w => w.length > 3)
-    };
-  }
+  return {
+    theme: extractTheme(message),
+    emotion: "curious",
+    context: null,
+    search_terms: words.length > 0 ? words : ['family', 'life', 'story']
+  };
 }
 
 async function fetchRelevantStories(intent) {
@@ -99,11 +89,15 @@ async function fetchRelevantStories(intent) {
         const keywords = story.keywords?.map(k => k.toLowerCase()) || [];
         const description = story.description?.toLowerCase() || '';
         
-        // Check if story matches intent
-        const matches = intent.search_terms.some(term => 
-          keywords.some(k => k.includes(term)) || 
-          description.includes(term)
-        );
+        // Check if story matches intent - more flexible matching
+        const matches = intent.search_terms.some(term => {
+          // Split compound search terms into individual words
+          const termWords = term.toLowerCase().split(' ');
+          return termWords.some(word => 
+            keywords.some(k => k.toLowerCase().includes(word)) || 
+            description.toLowerCase().includes(word)
+          );
+        });
         
         if (matches) {
           stories.push(story);
