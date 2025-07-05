@@ -1,9 +1,15 @@
-# Mosaic: Finding Human Unity Through Stories
+# 🎭 Mosaic: Finding Human Unity Through Stories
 
-A data visualization project that discovers and displays common themes across diverse human experiences using the StoryCorps archive.
+An AI-powered conversational interface that discovers deep human connections across different backgrounds using StoryCorps stories and Claude.
 
-## Live Demo
-[View Dashboard](#) (Coming soon)
+## Experience Mosaic
+
+Ask questions like:
+- "How do single parents find strength?"
+- "Show me stories about immigrants finding home"
+- "What connects people during loss?"
+
+Mosaic will discover patterns of unity across different demographics in real-time.
 
 ## Overview
 Mosaic analyzes thousands of personal stories to find surprising connections between people of different backgrounds, revealing the themes that unite us across geography, age, culture, and beliefs.
