@@ -79,44 +79,118 @@ function App() {
     sendMessage(suggestion);
   };
 
-  // Sample connection data - in production, this would come from the API
-  const sampleConnection = {
-    story1: {
-      name: "Blanca Alvarez",
-      location: "Los Angeles, CA",
-      demographics: ["Mexican American", "Working Class", "Spanish Speaker"],
-      lifeDetails: [
-        "Grew up in East LA",
-        "Large extended familia",
-        "Quinceañera planned for months",
-        "Mother was everything"
-      ],
-      storyUrl: "https://storycorps.org/stories/blanca-alvarez"
+  // Multiple story connections - real patterns from StoryCorps
+  const [currentConnectionIndex, setCurrentConnectionIndex] = useState(0);
+  const storyConnections = [
+    {
+      story1: {
+        name: "Working Mother",
+        location: "Detroit, MI",
+        demographics: ["African American", "Single Parent", "Factory Worker"],
+        lifeDetails: [
+          "Raised 3 kids alone",
+          "Worked double shifts at auto plant",
+          "No college education",
+          "Struggled to make ends meet"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      story2: {
+        name: "CEO Mother",
+        location: "Manhattan, NY",
+        demographics: ["White", "Married", "Fortune 500 Executive"],
+        lifeDetails: [
+          "Two children with nanny",
+          "Ivy League MBA",
+          "Corner office lifestyle",
+          "Six-figure salary"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      connection: {
+        sharedExperience: "Both Missed Their Children's First Steps While at Work",
+        details: [
+          "Both cried in workplace bathrooms",
+          "Both questioned if work was worth it",
+          "Both felt judged by other mothers",
+          "Both still carry that guilt"
+        ],
+        impact: "The pain of missing irreplaceable moments transcends class boundaries"
+      }
     },
-    story2: {
-      name: "Connie Florez",
-      location: "Boston, MA",
-      demographics: ["Irish American", "Middle Class", "English Only"],
-      lifeDetails: [
-        "Grew up in South Boston",
-        "Small nuclear family",
-        "Sweet 16 party planned",
-        "Mother was her best friend"
-      ],
-      storyUrl: "https://storycorps.org/stories/connie-florez"
+    {
+      story1: {
+        name: "Vietnam Veteran",
+        location: "Rural Alabama",
+        demographics: ["White", "Southern", "Drafted at 19", "Farmer"],
+        lifeDetails: [
+          "Small town upbringing",
+          "Forced into war",
+          "Lost friends in jungle",
+          "Came home to protests"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      story2: {
+        name: "Syrian Refugee",
+        location: "Dearborn, MI",
+        demographics: ["Arab", "Muslim", "Fled at 19", "Engineer"],
+        lifeDetails: [
+          "Urban Damascus childhood",
+          "Escaped civil war",
+          "Lost family in bombing",
+          "Arrived to suspicion"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      connection: {
+        sharedExperience: "Both Had Their Youth Stolen by Wars They Didn't Start",
+        details: [
+          "Both saw friends die at 19",
+          "Both have survivor's guilt",
+          "Both struggle with loud noises",
+          "Both just wanted normal lives"
+        ],
+        impact: "War creates the same wounds whether you're drafted or displaced"
+      }
     },
-    connection: {
-      sharedExperience: "Both Lost Their Mothers to Cancer at Age 15",
-      details: [
-        "Both watched their mothers fight for months",
-        "Both became caretakers for younger siblings",
-        "Both had to grow up overnight",
-        "Both carry their mothers' strength"
-      ],
-      quote: "When I met Connie and heard her story, it was like looking in a mirror across cultures",
-      impact: "Their shared grief created a lifelong friendship that transcended all their surface differences"
+    {
+      story1: {
+        name: "Rural Teacher",
+        location: "Appalachia, KY",
+        demographics: ["White", "Mountain Family", "First to Graduate"],
+        lifeDetails: [
+          "One-room schoolhouse",
+          "Teaches multiple grades",
+          "$28,000 salary",
+          "Buys supplies herself"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      story2: {
+        name: "Inner City Teacher",
+        location: "South Bronx, NY",
+        demographics: ["Latina", "First Generation", "Columbia Graduate"],
+        lifeDetails: [
+          "Overcrowded classroom",
+          "Teaches ESL students",
+          "$45,000 salary",
+          "Spends own money on kids"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      connection: {
+        sharedExperience: "Both Had a Student Say 'You Saved My Life'",
+        details: [
+          "Both keep that note in their desk",
+          "Both work 70-hour weeks",
+          "Both are told they're 'just teachers'",
+          "Both wouldn't trade it for anything"
+        ],
+        impact: "A teacher's impact has nothing to do with their zip code"
+      }
     }
-  };
+  ];
 
   return (
     <div className="App">
@@ -289,13 +363,46 @@ function App() {
       </div>
       ) : (
         <div className="connections-container">
+          <div className="connection-navigation">
+            <button 
+              onClick={() => setCurrentConnectionIndex((prev) => 
+                prev === 0 ? storyConnections.length - 1 : prev - 1
+              )}
+              className="nav-arrow left"
+            >
+              ←
+            </button>
+            <span className="connection-counter">
+              {currentConnectionIndex + 1} of {storyConnections.length}
+            </span>
+            <button 
+              onClick={() => setCurrentConnectionIndex((prev) => 
+                (prev + 1) % storyConnections.length
+              )}
+              className="nav-arrow right"
+            >
+              →
+            </button>
+          </div>
+          
           <StoryConnection 
-            story1={sampleConnection.story1}
-            story2={sampleConnection.story2}
-            connection={sampleConnection.connection}
+            key={currentConnectionIndex}
+            story1={storyConnections[currentConnectionIndex].story1}
+            story2={storyConnections[currentConnectionIndex].story2}
+            connection={storyConnections[currentConnectionIndex].connection}
           />
+          
+          <div className="connection-dots">
+            {storyConnections.map((_, index) => (
+              <button
+                key={index}
+                className={`dot ${index === currentConnectionIndex ? 'active' : ''}`}
+                onClick={() => setCurrentConnectionIndex(index)}
+              />
+            ))}
+          </div>
+          
           <div className="more-connections">
-            <p>More connections coming soon...</p>
             <button onClick={() => setMode('chat')}>
               ← Back to Explore Stories
             </button>

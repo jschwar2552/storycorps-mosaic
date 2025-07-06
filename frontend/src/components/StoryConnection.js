@@ -77,9 +77,11 @@ function StoryConnection({ story1, story2, connection }) {
               <p key={i} className="detail-item">{detail}</p>
             ))}
           </div>
-          <div className="connection-quote">
-            "{connection.quote}"
-          </div>
+          {connection.quote && (
+            <div className="connection-quote">
+              "{connection.quote}"
+            </div>
+          )}
           <div className="connection-impact">
             {connection.impact}
           </div>

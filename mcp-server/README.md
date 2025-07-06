@@ -13,20 +13,14 @@ A Model Context Protocol server for exploring human connections through StoryCor
 
 ## Installation
 
-1. Install the MCP package:
+The server is already configured! It's been added to Claude Code:
+
 ```bash
-pip install mcp
+claude mcp list
+# Output: storycorps: python3 /Users/jason/storycorps-mosaic/mcp-server/storycorps_server.py
 ```
 
-2. Make the server executable:
-```bash
-chmod +x storycorps_mcp.py
-```
-
-3. Add to Claude Code:
-```bash
-claude mcp add storycorps /Users/jason/storycorps-mosaic/mcp-server/storycorps_mcp.py
-```
+**Important**: You need to restart Claude Code completely (Cmd+Q, wait 5-10 seconds, reopen) for the MCP server to load.
 
 ## Usage
 
@@ -76,24 +70,58 @@ What themes have I explored?
 
 1. **Cache-First**: Checks local SQLite cache before hitting API
 2. **Progressive Building**: Cache grows as you explore
-3. **30-Day Freshness**: Stories stay cached for 30 days
-4. **Pattern Memory**: Saves your unity analyses
-5. **Direct Links**: Every story includes its StoryCorps URL
+3. **Persistent Storage**: Stories stay cached between sessions
+4. **Direct Links**: Every story includes its StoryCorps URL
+5. **Gotcha-Resistant**: Handles MCP session restarts gracefully
 
-## Database Schema
+## Architecture
 
+The server (`storycorps_server.py`) addresses common MCP gotchas:
+- **Proper JSON-RPC protocol** for stability
+- **SQLite persistence** survives session restarts
+- **Signal handling** for clean shutdown
+- **Zombie process prevention**
+- **Logging** to `~/.claude/storycorps_mcp.log`
+
+## Database
+
+Located at `~/.storycorps_cache.db`:
 - `stories`: Cached story data with keywords, location, URL
-- `pattern_cache`: Saved unity analyses
 - `collections`: Your curated story groups
-- `search_cache`: Query results cache
 
 ## Tips
 
 - Start broad ("family") then narrow ("single parent families")
 - Use location filters to compare regions
 - Save interesting patterns as collections
-- Check cache status to see your exploration history
 - Stories include direct links to StoryCorps for full experience
+
+## Troubleshooting
+
+If the MCP server isn't responding:
+
+1. **Check for zombie processes**:
+```bash
+ps aux | grep storycorps_server
+pkill -f storycorps_server
+```
+
+2. **Restart Claude Code completely** (Cmd+Q, wait 5-10 seconds)
+
+3. **Check logs**:
+```bash
+tail -f ~/.claude/storycorps_mcp.log
+```
+
+4. **Verify configuration**:
+```bash
+claude mcp list
+```
+
+5. **Test manually**:
+```bash
+python3 /Users/jason/storycorps-mosaic/mcp-server/test_server.py
+```
 
 ## Advantages Over Website
 
