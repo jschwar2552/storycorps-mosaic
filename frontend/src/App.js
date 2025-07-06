@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
+import StoryConnection from './components/StoryConnection';
 
 function App() {
+  const [mode, setMode] = useState('chat'); // 'chat' or 'connections'
   const [messages, setMessages] = useState([
     {
       type: 'bot',
@@ -77,14 +79,68 @@ function App() {
     sendMessage(suggestion);
   };
 
+  // Sample connection data - in production, this would come from the API
+  const sampleConnection = {
+    story1: {
+      name: "Blanca Alvarez",
+      location: "Los Angeles, CA",
+      demographics: ["Mexican American", "Working Class", "Spanish Speaker"],
+      lifeDetails: [
+        "Grew up in East LA",
+        "Large extended familia",
+        "Quinceañera planned for months",
+        "Mother was everything"
+      ],
+      storyUrl: "https://storycorps.org/stories/blanca-alvarez"
+    },
+    story2: {
+      name: "Connie Florez",
+      location: "Boston, MA",
+      demographics: ["Irish American", "Middle Class", "English Only"],
+      lifeDetails: [
+        "Grew up in South Boston",
+        "Small nuclear family",
+        "Sweet 16 party planned",
+        "Mother was her best friend"
+      ],
+      storyUrl: "https://storycorps.org/stories/connie-florez"
+    },
+    connection: {
+      sharedExperience: "Both Lost Their Mothers to Cancer at Age 15",
+      details: [
+        "Both watched their mothers fight for months",
+        "Both became caretakers for younger siblings",
+        "Both had to grow up overnight",
+        "Both carry their mothers' strength"
+      ],
+      quote: "When I met Connie and heard her story, it was like looking in a mirror across cultures",
+      impact: "Their shared grief created a lifelong friendship that transcended all their surface differences"
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>🎭 Mosaic</h1>
         <p>Discovering human unity through stories</p>
+        <div className="mode-toggle">
+          <button 
+            className={mode === 'chat' ? 'active' : ''}
+            onClick={() => setMode('chat')}
+          >
+            💬 Explore Stories
+          </button>
+          <button 
+            className={mode === 'connections' ? 'active' : ''}
+            onClick={() => setMode('connections')}
+          >
+            🔗 See Connections
+          </button>
+        </div>
       </header>
 
-      <div className="chat-container">
+      {mode === 'chat' ? (
+        <div className="chat-container">
         <div className="messages">
           {messages.map((msg, idx) => (
             <div key={idx} className={`message ${msg.type}`}>
@@ -231,6 +287,21 @@ function App() {
           </button>
         </form>
       </div>
+      ) : (
+        <div className="connections-container">
+          <StoryConnection 
+            story1={sampleConnection.story1}
+            story2={sampleConnection.story2}
+            connection={sampleConnection.connection}
+          />
+          <div className="more-connections">
+            <p>More connections coming soon...</p>
+            <button onClick={() => setMode('chat')}>
+              ← Back to Explore Stories
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
