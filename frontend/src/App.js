@@ -3,7 +3,7 @@ import './App.css';
 import StoryConnection from './components/StoryConnection';
 
 function App() {
-  const [mode, setMode] = useState('chat'); // 'chat' or 'connections'
+  const [mode, setMode] = useState('home'); // 'home', 'chat', or 'connections'
   const [messages, setMessages] = useState([
     {
       type: 'bot',
@@ -199,6 +199,12 @@ function App() {
         <p>Discovering human unity through stories</p>
         <div className="mode-toggle">
           <button 
+            className={mode === 'home' ? 'active' : ''}
+            onClick={() => setMode('home')}
+          >
+            🏠 Home
+          </button>
+          <button 
             className={mode === 'chat' ? 'active' : ''}
             onClick={() => setMode('chat')}
           >
@@ -213,7 +219,109 @@ function App() {
         </div>
       </header>
 
-      {mode === 'chat' ? (
+      {mode === 'home' ? (
+        <div className="home-container">
+          <section className="hero">
+            <h2>Every human has a story. Every story connects us.</h2>
+            <p className="hero-subtitle">
+              Mosaic reveals the invisible threads that bind humanity together, 
+              one story at a time.
+            </p>
+          </section>
+
+          <section className="about-section">
+            <div className="content-block">
+              <h3>📚 What is StoryCorps?</h3>
+              <p>
+                StoryCorps is one of the largest oral history projects of its kind. 
+                Since 2003, it has collected and archived more than 650,000 interviews 
+                between everyday people. These aren't celebrity interviews—they're 
+                conversations between friends, family members, and strangers, capturing 
+                the wisdom of humanity.
+              </p>
+              <a href="https://storycorps.org" target="_blank" rel="noopener noreferrer" 
+                className="learn-more">
+                Visit StoryCorps Archive →
+              </a>
+            </div>
+
+            <div className="content-block">
+              <h3>🎭 What is Mosaic?</h3>
+              <p>
+                Mosaic uses AI to find profound connections between people who seem 
+                nothing alike. A factory worker in Detroit and a CEO in Manhattan. 
+                A Vietnam veteran and a Syrian refugee. On the surface, they're different. 
+                But dig deeper, and you'll find they share the same human experiences—loss, 
+                hope, sacrifice, joy.
+              </p>
+              <p>
+                We believe that in an increasingly divided world, these connections 
+                matter more than ever.
+              </p>
+            </div>
+
+            <div className="content-block">
+              <h3>✨ How It Works</h3>
+              <div className="features-grid">
+                <div className="feature">
+                  <h4>💬 Explore Stories</h4>
+                  <p>Chat with AI to discover stories by theme, emotion, or experience</p>
+                </div>
+                <div className="feature">
+                  <h4>🔗 See Connections</h4>
+                  <p>Visual journeys showing how different people share profound experiences</p>
+                </div>
+                <div className="feature">
+                  <h4>🤖 Powered by Claude</h4>
+                  <p>Advanced AI that understands nuance and finds deep human patterns</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="content-block future">
+              <h3>🚀 The Future: Expanding Human Connection</h3>
+              <p>
+                We're just getting started. Imagine a world where:
+              </p>
+              <ul>
+                <li>
+                  <strong>Claude interviews you</strong> to capture your story and find 
+                  your unexpected connections to others
+                </li>
+                <li>
+                  <strong>Multiple story archives unite</strong>—StoryCorps meets 
+                  Humans of New York meets local oral histories
+                </li>
+                <li>
+                  <strong>Real-time connection discovery</strong> as new stories are 
+                  added daily
+                </li>
+                <li>
+                  <strong>Community building</strong> where people who share profound 
+                  experiences can actually meet
+                </li>
+              </ul>
+              <p className="vision">
+                Our vision: Use AI not to divide us, but to reveal our shared humanity. 
+                Because when you truly see yourself in another person's story, 
+                the walls between us dissolve.
+              </p>
+            </div>
+          </section>
+
+          <section className="cta-section">
+            <h3>Ready to discover your connections?</h3>
+            <div className="cta-buttons">
+              <button onClick={() => setMode('chat')} className="cta-primary">
+                💬 Start Exploring Stories
+              </button>
+              <button onClick={() => setMode('connections')} className="cta-secondary">
+                🔗 See Example Connections
+              </button>
+            </div>
+          </section>
+        </div>
+      ) : mode === 'chat' ? (
         <div className="chat-container">
         <div className="messages">
           {messages.map((msg, idx) => (

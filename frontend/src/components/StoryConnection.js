@@ -5,13 +5,10 @@ function StoryConnection({ story1, story2, connection }) {
   const [isRevealed, setIsRevealed] = useState(false);
   const [hoveredStory, setHoveredStory] = useState(null);
 
-  // Auto-reveal after user has seen the contrast
+  // Reset reveal state when connection changes
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsRevealed(true);
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, []);
+    setIsRevealed(false);
+  }, [story1, story2]);
 
   return (
     <div className={`story-connection ${isRevealed ? 'revealed' : ''}`}>
