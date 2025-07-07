@@ -1,0 +1,231 @@
+/* StoryConnection Component - Anthropic Brand Aligned */
+
+.story-connection {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.surface-layer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+  transition: opacity 0.3s ease;
+}
+
+.story-connection.revealed .surface-layer {
+  opacity: 0.15;
+}
+
+/* Story Cards */
+.story-card {
+  background: var(--pure-white);
+  border: 1px solid var(--gray-100);
+  border-radius: 12px;
+  padding: var(--space-xl);
+  transition: all 0.2s ease;
+}
+
+.story-card:hover {
+  border-color: var(--gray-300);
+  box-shadow: 0 4px 12px rgba(20, 20, 19, 0.05);
+}
+
+.story-header {
+  margin-bottom: var(--space-md);
+}
+
+.story-header h3 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin: 0 0 var(--space-xs) 0;
+  color: var(--primary-black);
+}
+
+.location {
+  color: var(--gray-700);
+  font-size: var(--text-sm);
+}
+
+/* Demographics */
+.demographics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.demo-item {
+  background: var(--off-white);
+  padding: 4px var(--space-sm);
+  border-radius: 4px;
+  font-size: var(--text-xs);
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+/* Life Details */
+.life-details {
+  color: var(--gray-700);
+  font-size: var(--text-sm);
+  line-height: 1.8;
+}
+
+.life-details p {
+  margin: var(--space-xs) 0;
+}
+
+/* Connection Space */
+.connection-space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 var(--space-md);
+}
+
+.connecting-dots {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.connecting-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gray-300);
+  opacity: 0.5;
+}
+
+/* Connection Layer */
+.connection-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  max-width: 800px;
+  background: var(--pure-white);
+  border: 2px solid var(--primary-black);
+  border-radius: 12px;
+  padding: var(--space-2xl);
+  box-shadow: 0 20px 40px rgba(20, 20, 19, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.connection-layer.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.connection-reveal h2 {
+  text-align: center;
+  font-size: var(--text-xl);
+  color: var(--primary-black);
+  margin-bottom: var(--space-xl);
+  font-weight: 600;
+}
+
+.shared-details {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.detail-item {
+  font-size: var(--text-base);
+  color: var(--gray-700);
+  margin: var(--space-sm) 0;
+  line-height: 1.6;
+}
+
+.connection-quote {
+  font-size: var(--text-lg);
+  font-style: italic;
+  text-align: center;
+  color: var(--gray-700);
+  margin: var(--space-xl) 0;
+  padding: 0 var(--space-xl);
+  line-height: 1.6;
+}
+
+.connection-impact {
+  text-align: center;
+  color: var(--gray-900);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Reveal Button */
+.reveal-button {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-black);
+  color: var(--pure-white);
+  border: none;
+  padding: var(--space-sm) var(--space-xl);
+  border-radius: 8px;
+  font-size: var(--text-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.reveal-button:hover {
+  background: var(--gray-950);
+}
+
+/* Story Links */
+.story-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.story-link {
+  color: var(--primary-black);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border-bottom: 1px solid var(--primary-black);
+  transition: all 0.2s ease;
+}
+
+.story-link:hover {
+  color: var(--gray-700);
+  border-bottom-color: var(--gray-700);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .surface-layer {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .connection-space {
+    margin: var(--space-md) 0;
+    transform: rotate(90deg);
+  }
+  
+  .connection-layer {
+    width: 95%;
+    padding: var(--space-lg);
+  }
+  
+  .story-links {
+    flex-direction: column;
+    gap: var(--space-sm);
+    align-items: center;
+  }
+}

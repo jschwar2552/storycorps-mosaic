@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './App-new.css';
 import StoryConnection from './components/StoryConnection';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   const [messages, setMessages] = useState([
     {
       type: 'bot',
-      text: "Hi! I'm Mosaic. I help discover human connections across different backgrounds. Ask me anything about the human experience - I'll find surprising connections between people who seem nothing alike.",
+      text: "Welcome to Mosaic. I analyze human stories to reveal unexpected connections across different backgrounds. Ask me about any aspect of the human experience.",
       suggestions: [
         "Tell me about family struggles",
         "How do people find hope?", 
@@ -321,26 +321,26 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>🎭 Mosaic</h1>
-        <p>Discovering human unity through stories</p>
+        <h1>Mosaic</h1>
+        <p>Revealing human connections through StoryCorps</p>
         <div className="mode-toggle">
           <button 
             className={mode === 'home' ? 'active' : ''}
             onClick={() => setMode('home')}
           >
-            🏠 Home
+            About
           </button>
           <button 
             className={mode === 'chat' ? 'active' : ''}
             onClick={() => setMode('chat')}
           >
-            💬 Explore Stories
+            Explore
           </button>
           <button 
             className={mode === 'connections' ? 'active' : ''}
             onClick={() => setMode('connections')}
           >
-            🔗 See Connections
+            Connections
           </button>
         </div>
       </header>
@@ -357,7 +357,7 @@ function App() {
 
           <section className="about-section">
             <div className="content-block">
-              <h3>📚 What is StoryCorps?</h3>
+              <h3>What is StoryCorps?</h3>
               <p>
                 StoryCorps is one of the largest oral history projects of its kind. 
                 Since 2003, it has collected and archived more than 650,000 interviews 
@@ -372,7 +372,7 @@ function App() {
             </div>
 
             <div className="content-block">
-              <h3>🎭 What is Mosaic?</h3>
+              <h3>What is Mosaic?</h3>
               <p>
                 Mosaic uses AI to find profound connections between people who seem 
                 nothing alike. A factory worker in Detroit and a CEO in Manhattan. 
@@ -387,25 +387,25 @@ function App() {
             </div>
 
             <div className="content-block">
-              <h3>✨ How It Works</h3>
+              <h3>How It Works</h3>
               <div className="features-grid">
                 <div className="feature">
-                  <h4>💬 Explore Stories</h4>
+                  <h4>Explore Stories</h4>
                   <p>Chat with AI to discover stories by theme, emotion, or experience</p>
                 </div>
                 <div className="feature">
-                  <h4>🔗 See Connections</h4>
+                  <h4>See Connections</h4>
                   <p>Visual journeys showing how different people share profound experiences</p>
                 </div>
                 <div className="feature">
-                  <h4>🤖 Powered by Claude</h4>
+                  <h4>Powered by Claude</h4>
                   <p>Advanced AI that understands nuance and finds deep human patterns</p>
                 </div>
               </div>
             </div>
 
             <div className="content-block future">
-              <h3>🚀 The Future: Expanding Human Connection</h3>
+              <h3>The Future: Expanding Human Connection</h3>
               <p>
                 We're just getting started. Imagine a world where:
               </p>
@@ -439,10 +439,10 @@ function App() {
             <h3>Ready to discover your connections?</h3>
             <div className="cta-buttons">
               <button onClick={() => setMode('chat')} className="cta-primary">
-                💬 Start Exploring Stories
+                Start Exploring
               </button>
               <button onClick={() => setMode('connections')} className="cta-secondary">
-                🔗 See Example Connections
+                View Connections
               </button>
             </div>
           </section>
@@ -452,7 +452,7 @@ function App() {
         <div className="messages">
           {messages.map((msg, idx) => (
             <div key={idx} className={`message ${msg.type}`}>
-              {msg.type === 'bot' && <span className="bot-icon">🤖</span>}
+              {msg.type === 'bot' && <span className="bot-icon">M</span>}
               
               <div className="message-content">
                 <p>{msg.text}</p>
@@ -481,7 +481,7 @@ function App() {
                   <div className="analysis-section">
                     <div className="contrast-connection">
                       <div className="differences">
-                        <h4>🌍 Surface Differences</h4>
+                        <h4>Surface Differences</h4>
                         <ul>
                           {msg.analysis.surfaceDifferences.map((diff, i) => (
                             <li key={i}>{diff}</li>
@@ -490,7 +490,7 @@ function App() {
                       </div>
                       
                       <div className="connections">
-                        <h4>💝 Deep Connections</h4>
+                        <h4>Deep Connections</h4>
                         <ul>
                           {msg.analysis.deepConnections.map((conn, i) => (
                             <li key={i}>{conn}</li>
@@ -501,14 +501,14 @@ function App() {
                     
                     {msg.analysis.surprisingUnity && (
                       <div className="surprising-unity">
-                        <h4>✨ The Surprising Unity</h4>
+                        <h4>The Surprising Unity</h4>
                         <p>{msg.analysis.surprisingUnity}</p>
                       </div>
                     )}
                     
                     {msg.analysis.concreteExamples.length > 0 && (
                       <div className="concrete-examples">
-                        <h4>💬 Voices Across Divides</h4>
+                        <h4>Voices Across Divides</h4>
                         {msg.analysis.concreteExamples.map((example, i) => (
                           <p key={i} className="example">{example}</p>
                         ))}
@@ -541,7 +541,7 @@ function App() {
                         <div className="story-actions">
                           <span className="read-more">Click to read full story →</span>
                           {story.audioUrl && (
-                            <span className="audio-indicator">🎧 Audio available</span>
+                            <span className="audio-indicator">Audio available</span>
                           )}
                         </div>
                       </div>
@@ -572,7 +572,7 @@ function App() {
           
           {loading && (
             <div className="message bot">
-              <span className="bot-icon">🤖</span>
+              <span className="bot-icon">M</span>
               <div className="loading">
                 <span></span>
                 <span></span>
@@ -610,7 +610,7 @@ function App() {
                   setPreviousConnections(prev => [...prev, connection]);
                 }}
               >
-                🔮 Find a Connection
+                Find a Connection
               </button>
             </div>
           ) : (
@@ -637,13 +637,13 @@ function App() {
                     setPreviousConnections(prev => [...prev, connection]);
                   }}
                 >
-                  🔮 Find Another Connection
+                  Find Another Connection
                 </button>
                 <button 
                   className="back-btn"
                   onClick={() => setMode('chat')}
                 >
-                  💬 Explore Stories
+                  Explore Stories
                 </button>
               </div>
             </>

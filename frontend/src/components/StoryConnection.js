@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './StoryConnection.css';
+import './StoryConnection-new.css';
 
 function StoryConnection({ story1, story2, connection }) {
   const [isRevealed, setIsRevealed] = useState(false);
