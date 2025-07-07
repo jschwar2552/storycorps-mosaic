@@ -3,7 +3,6 @@ import './StoryConnection-new.css';
 
 function StoryConnection({ story1, story2, connection }) {
   const [isRevealed, setIsRevealed] = useState(false);
-  const [hoveredStory, setHoveredStory] = useState(null);
 
   // Reset reveal state when connection changes
   useEffect(() => {
@@ -13,11 +12,7 @@ function StoryConnection({ story1, story2, connection }) {
   return (
     <div className={`story-connection ${isRevealed ? 'revealed' : ''}`}>
       <div className="surface-layer">
-        <div 
-          className="story-card left"
-          onMouseEnter={() => setHoveredStory(1)}
-          onMouseLeave={() => setHoveredStory(null)}
-        >
+        <div className="story-card left">
           <div className="story-header">
             <h3>{story1.name}</h3>
             <span className="location">{story1.location}</span>
@@ -45,11 +40,7 @@ function StoryConnection({ story1, story2, connection }) {
           </div>
         </div>
 
-        <div 
-          className="story-card right"
-          onMouseEnter={() => setHoveredStory(2)}
-          onMouseLeave={() => setHoveredStory(null)}
-        >
+        <div className="story-card right">
           <div className="story-header">
             <h3>{story2.name}</h3>
             <span className="location">{story2.location}</span>
