@@ -80,7 +80,9 @@ function App() {
   };
 
   // Multiple story connections - real patterns from StoryCorps
-  const [currentConnectionIndex, setCurrentConnectionIndex] = useState(0);
+  const [currentConnection, setCurrentConnection] = useState(null);
+  const [previousConnections, setPreviousConnections] = useState([]);
+  
   const storyConnections = [
     {
       story1: {
@@ -189,8 +191,132 @@ function App() {
         ],
         impact: "A teacher's impact has nothing to do with their zip code"
       }
+    },
+    {
+      story1: {
+        name: "Immigrant Grandfather",
+        location: "Queens, NY",
+        demographics: ["Korean", "No English", "Corner Store Owner"],
+        lifeDetails: [
+          "Arrived in 1985 with $200",
+          "Slept in store backroom",
+          "Worked 18-hour days",
+          "Kids ashamed of accent"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      story2: {
+        name: "Tech Entrepreneur",
+        location: "Silicon Valley, CA",
+        demographics: ["Indian", "Stanford MBA", "Startup Founder"],
+        lifeDetails: [
+          "H1-B visa stress",
+          "Sleeping at office",
+          "90-hour work weeks",
+          "Parents don't understand"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      connection: {
+        sharedExperience: "Both Sacrificed Everything for the American Dream",
+        details: [
+          "Both left everything behind",
+          "Both worked until exhaustion",
+          "Both felt isolated from family",
+          "Both wonder if it was worth it"
+        ],
+        impact: "The immigrant sacrifice remains unchanged across generations and education levels"
+      }
+    },
+    {
+      story1: {
+        name: "Teenage Mother",
+        location: "Rural Mississippi",
+        demographics: ["Black", "16 Years Old", "Dropped Out"],
+        lifeDetails: [
+          "Baby at 16",
+          "Kicked out of school",
+          "Works at Walmart",
+          "Dreams deferred"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      story2: {
+        name: "Medical Student",
+        location: "Baltimore, MD",
+        demographics: ["White", "26 Years Old", "Ivy League"],
+        lifeDetails: [
+          "Pregnant in residency",
+          "Told to 'wait until after'",
+          "Hidden morning sickness",
+          "Career vs. motherhood"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      connection: {
+        sharedExperience: "Both Were Told 'You're Throwing Your Life Away'",
+        details: [
+          "Both heard 'terrible timing'",
+          "Both questioned by everyone",
+          "Both chose baby over 'success'",
+          "Both proved them wrong"
+        ],
+        impact: "Society judges all young mothers, regardless of their circumstances"
+      }
+    },
+    {
+      story1: {
+        name: "Coal Miner's Daughter",
+        location: "West Virginia",
+        demographics: ["White", "Appalachian", "First to Leave"],
+        lifeDetails: [
+          "Father died of black lung",
+          "Escaped to college",
+          "Family calls her 'uppity'",
+          "Survivor's guilt"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      story2: {
+        name: "Gang Member's Sister",
+        location: "Chicago, IL",
+        demographics: ["Latina", "South Side", "Scholarship Kid"],
+        lifeDetails: [
+          "Brother killed at 19",
+          "Got into Northwestern",
+          "Neighborhood thinks she forgot them",
+          "Can't go home"
+        ],
+        storyUrl: "https://storycorps.org/stories/"
+      },
+      connection: {
+        sharedExperience: "Both Lost Family to Their Hometown's Violence",
+        details: [
+          "Both watched loved ones die young",
+          "Both escaped through education",
+          "Both feel guilty for leaving",
+          "Both can't truly go home"
+        ],
+        impact: "Escaping poverty means leaving part of yourself behind"
+      }
     }
   ];
+  
+  // Function to get a random connection
+  const getRandomConnection = () => {
+    const availableConnections = storyConnections.filter(
+      conn => !previousConnections.includes(conn)
+    );
+    
+    if (availableConnections.length === 0) {
+      // Reset if we've shown all connections
+      setPreviousConnections([]);
+      return storyConnections[Math.floor(Math.random() * storyConnections.length)];
+    }
+    
+    const randomIndex = Math.floor(Math.random() * availableConnections.length);
+    return availableConnections[randomIndex];
+  };
 
   return (
     <div className="App">
@@ -471,50 +597,57 @@ function App() {
       </div>
       ) : (
         <div className="connections-container">
-          <div className="connection-navigation">
-            <button 
-              onClick={() => setCurrentConnectionIndex((prev) => 
-                prev === 0 ? storyConnections.length - 1 : prev - 1
-              )}
-              className="nav-arrow left"
-            >
-              ←
-            </button>
-            <span className="connection-counter">
-              {currentConnectionIndex + 1} of {storyConnections.length}
-            </span>
-            <button 
-              onClick={() => setCurrentConnectionIndex((prev) => 
-                (prev + 1) % storyConnections.length
-              )}
-              className="nav-arrow right"
-            >
-              →
-            </button>
-          </div>
-          
-          <StoryConnection 
-            key={currentConnectionIndex}
-            story1={storyConnections[currentConnectionIndex].story1}
-            story2={storyConnections[currentConnectionIndex].story2}
-            connection={storyConnections[currentConnectionIndex].connection}
-          />
-          
-          <div className="connection-dots">
-            {storyConnections.map((_, index) => (
-              <button
-                key={index}
-                className={`dot ${index === currentConnectionIndex ? 'active' : ''}`}
-                onClick={() => setCurrentConnectionIndex(index)}
+          {!currentConnection ? (
+            <div className="matchmaking-intro">
+              <h2>Let Claude find unexpected human connections</h2>
+              <p>I'll show you two people who seem completely different on the surface, 
+                 but share a profound human experience.</p>
+              <button 
+                className="find-connection-btn"
+                onClick={() => {
+                  const connection = getRandomConnection();
+                  setCurrentConnection(connection);
+                  setPreviousConnections(prev => [...prev, connection]);
+                }}
+              >
+                🔮 Find a Connection
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="connection-header">
+                <p className="connection-intro">
+                  Claude found an unexpected connection...
+                </p>
+              </div>
+              
+              <StoryConnection 
+                key={Math.random()}
+                story1={currentConnection.story1}
+                story2={currentConnection.story2}
+                connection={currentConnection.connection}
               />
-            ))}
-          </div>
-          
-          <div className="more-connections">
-            <button onClick={() => setMode('chat')}>
-              ← Back to Explore Stories
-            </button>
-          </div>
+              
+              <div className="connection-actions">
+                <button 
+                  className="new-connection-btn"
+                  onClick={() => {
+                    const connection = getRandomConnection();
+                    setCurrentConnection(connection);
+                    setPreviousConnections(prev => [...prev, connection]);
+                  }}
+                >
+                  🔮 Find Another Connection
+                </button>
+                <button 
+                  className="back-btn"
+                  onClick={() => setMode('chat')}
+                >
+                  💬 Explore Stories
+                </button>
+              </div>
+            </>
+          )}
         </div>
       )}
     </div>

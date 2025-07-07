@@ -37,8 +37,12 @@ function StoryConnection({ story1, story2, connection }) {
           </div>
         </div>
 
-        <div className="versus">
-          <span className={hoveredStory ? 'fading' : ''}>VS</span>
+        <div className="connection-space">
+          <div className="connecting-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
 
         <div 
